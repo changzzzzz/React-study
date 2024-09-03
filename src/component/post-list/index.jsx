@@ -1,7 +1,7 @@
 export default props => {
     return (
         <div>
-            <h1>Footer</h1>
+            <h1>PostList</h1>
         </div>
     )
 }
