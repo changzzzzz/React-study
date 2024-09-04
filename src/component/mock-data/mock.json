@@ -1,0 +1,22 @@
+[
+    {
+        "id":1,
+        "postTitle": "Card title",
+        "postContent":"aasd"
+    },
+    {
+        "id":2,
+        "postTitle": "Card title",
+        "postContent":"aasd"
+    },
+    {
+        "id":3,
+        "postTitle": "Card title",
+        "postContent":"aasd"
+    },
+    {
+        "id":4,
+        "postTitle": "Card title",
+        "postContent":"aasd"
+    }
+]

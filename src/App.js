@@ -9,12 +9,13 @@ function App() {
   return (
     <div className="App" data-bs-theme="dark">
       <NavBar></NavBar>
-      <div>
+      <div className='container main-container'>
         <PostList></PostList>
       </div>
       <Footer></Footer>
     </div>
   );
+
 }
 
 export default App;
