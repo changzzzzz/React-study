@@ -20,11 +20,17 @@ export default props => {
                                 <div className="card-body">
                                     <h5 className="card-title">{item.postTitle}</h5>
                                     <p className="card-text"> {item.postContent}</p>
-                                    <a href="#" className="btn btn-primary" onClick={
+                                    {item.studied ? (
+                                        <p>已学习</p>
+                                    ):(
+                                        <a href="#" className="btn btn-primary" onClick={
                                         () => {
                                            navigate(`/post-detail/${item.id}`);
                                         }
-                                    }>详情</a>
+                                    }>未学习</a>
+                                    )
+                                    
+                                    }
                                 </div>
                             </div>
                         )
