@@ -7,7 +7,9 @@ import "./App.scss";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Greeting from "./greeting";
 import AwsCard from "./component/aws-card";
-
+import ManageMain from "./component/manage/manage-main";
+import Dashboard from "./component/manage/dashboard";
+import PostManage from "./component/manage/post-manage";
 function App() {
   return (
     <Router>
@@ -22,6 +24,13 @@ function App() {
               element={<PostDetail></PostDetail>}
             ></Route>
             <Route path="/write-post" element={<WritePost></WritePost>}></Route>
+            <Route path="/manage" element={<ManageMain></ManageMain>}>
+              <Route path="dashboard" element={<Dashboard></Dashboard>}></Route>
+              <Route
+                path="post-mng"
+                element={<PostManage></PostManage>}
+              ></Route>
+            </Route>
           </Routes>
         </div>
         <Footer></Footer>
