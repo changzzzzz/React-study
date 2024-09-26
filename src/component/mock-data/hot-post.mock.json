@@ -1,26 +1,29 @@
-[
-  {
-    "id": 1,
-    "postTitle": "Class 1",
-    "postContent": "Class 1",
-    "studied": true
-  },
-  {
-    "id": 2,
-    "postTitle": "Class 2",
-    "postContent": "Class 2",
-    "studied": true
-  },
-  {
-    "id": 3,
-    "postTitle": "Class 3",
-    "postContent": "Class 3",
-    "studied": false
-  },
-  {
-    "id": 4,
-    "postTitle": "Class 4",
-    "postContent": "Class 4",
-    "studied": true
-  }
-]
+{
+  "posts": [
+    {
+      "id": 1,
+      "postTitle": "Class 1",
+      "postContent": "Class 1",
+      "studied": true
+    },
+    {
+      "id": 2,
+      "postTitle": "Class 2",
+      "postContent": "Class 2",
+      "studied": true
+    },
+    {
+      "id": 3,
+      "postTitle": "Class 3",
+      "postContent": "Class 3",
+      "studied": false
+    },
+    {
+      "id": 4,
+      "postTitle": "Class 4",
+      "postContent": "Class 4",
+      "studied": true
+    }
+  ],
+  "comments": [{ "id": 1, "body": "some comments", "postID": 1 }]
+}

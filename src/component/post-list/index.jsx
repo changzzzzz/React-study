@@ -5,14 +5,17 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export default (props) => {
-  const [postList, setPostList] = useState([...postListMock]);
+  // const [postList, setPostList] = useState([...postListMock]);
   const navigate = useNavigate();
+
+  const [postList, setPostList] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/postList")
-      .then((response) => {
-        console.log(response);
+      .get("http://localhost:3001/posts")
+      .then((res) => {
+        console.log(res);
+        setPostList(res?.data);
       })
       .catch((error) => {
         console.log(error);
