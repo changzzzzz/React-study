@@ -47,6 +47,15 @@ export default (props) => {
                 管理后台
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink
+                className="nav-link active"
+                aria-current="post list"
+                to="/high-order"
+              >
+                高阶组件
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>

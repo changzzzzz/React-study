@@ -11,11 +11,30 @@ export default (props) => {
   const [postList, setPostList] = useState([]);
 
   useEffect(() => {
-    axios
+    // axios
+    //   .get("http://localhost:3001/posts")
+    //   .then((res) => {
+    //     console.log(res);
+    //     setPostList(res?.data || []);
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
+
+    const api = axios.create();
+    api.interceptors.request.use(
+      (config) => {
+        return config;
+      },
+      (error) => {
+        return Promise.reject(error);
+      }
+    );
+    api
       .get("http://localhost:3001/posts")
       .then((res) => {
         console.log(res);
-        setPostList(res?.data);
+        setPostList(res?.data || []);
       })
       .catch((error) => {
         console.log(error);

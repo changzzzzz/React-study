@@ -10,6 +10,7 @@ import AwsCard from "./component/aws-card";
 import ManageMain from "./component/manage/manage-main";
 import Dashboard from "./component/manage/dashboard";
 import PostManage from "./component/manage/post-manage";
+import PlainComponent from "./component/plain-component";
 function App() {
   return (
     <Router>
@@ -23,6 +24,11 @@ function App() {
               path="/post-detail/:id"
               element={<PostDetail></PostDetail>}
             ></Route>
+            <Route
+              path="/high-order"
+              element={<PlainComponent></PlainComponent>}
+            ></Route>
+
             <Route path="/write-post" element={<WritePost></WritePost>}></Route>
             <Route path="/manage" element={<ManageMain></ManageMain>}>
               <Route path="dashboard" element={<Dashboard></Dashboard>}></Route>
