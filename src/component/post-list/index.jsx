@@ -1,11 +1,24 @@
 import "./index.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import postListMock from "../mock-data/mock.json";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export default (props) => {
   const [postList, setPostList] = useState([...postListMock]);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/postList")
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
   return (
     <div className="post-list-container">
       {postList.map((item) => {
